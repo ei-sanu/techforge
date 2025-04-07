@@ -1,4 +1,4 @@
-// Mobile Menu Toggle
+
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('nav ul');
 
@@ -6,9 +6,8 @@ burger.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
 
-// Countdown Timer
 const countdownDate = new Date();
-countdownDate.setDate(countdownDate.getDate() + 21); // Set to 21 days from now
+countdownDate.setDate(countdownDate.getDate() + 21);
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -28,7 +27,6 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 
-// Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -37,22 +35,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
 
-        // Close mobile menu if open
         if (nav.classList.contains('active')) {
             nav.classList.remove('active');
         }
     });
 });
 
-// Glitch Animation Control
 const glitchElement = document.querySelector('.glitch');
 
-// Disable glitch animation initially
 setTimeout(() => {
     glitchElement.style.animation = 'none';
 }, 3000);
 
-// Reactivate glitch on hover
 glitchElement.addEventListener('mouseenter', () => {
     glitchElement.style.animation = 'glitch-1 2s infinite linear alternate-reverse';
 });
@@ -63,7 +57,6 @@ glitchElement.addEventListener('mouseleave', () => {
     }, 2000);
 });
 
-// Fade-in animation for sections
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -80,7 +73,6 @@ document.querySelectorAll('.section, .countdown, .event-details').forEach(sectio
     observer.observe(section);
 });
 
-// Map Modal functionality
 document.addEventListener('DOMContentLoaded', () => {
     const mapContainer = document.querySelector('.map-container');
     const mapModal = document.getElementById('mapModal');
@@ -93,12 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         closeModal.addEventListener('click', (e) => {
-            e.stopPropagation(); // Prevent event bubbling
+            e.stopPropagation();
             mapModal.style.display = 'none';
             document.body.style.overflow = 'auto';
         });
 
-        // Close on clicking outside the modal
         mapModal.addEventListener('click', (e) => {
             if (e.target === mapModal) {
                 mapModal.style.display = 'none';
@@ -106,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close on ESC key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && mapModal.style.display === 'block') {
                 mapModal.style.display = 'none';
@@ -115,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Footer map modal
     const footerMapContainer = document.querySelector('.footer-map');
     const footerMapModal = document.getElementById('footerMapModal');
     const footerCloseModal = footerMapModal?.querySelector('.close-modal');
