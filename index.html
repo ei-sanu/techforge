@@ -75,7 +75,7 @@
             <h2 class="section-title">HOSTED BY LPU</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="images/lpu.jpg" alt="Lovely Professional University">
+                    <img src="images/lpuupdates.png" alt="Lovely Professional University">
                 </div>
                 <div class="about-text">
                     <p>Lovely Professional University (LPU) stands as a beacon of modern education, blending innovation,
@@ -364,20 +364,28 @@
       </div>
       <div>
         <h3 style="font-family: 'Orbitron', sans-serif; color: var(--primary); margin-bottom: 1.5rem; font-size: 1.5rem;">SEND US A MESSAGE</h3>
-        <form>
-          <div style="margin-bottom: 1.5rem;">
-            <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.8rem; background-color: rgba(10, 25, 35, 0.8); border: 1px solid var(--primary); color: var(--text); font-family: 'Rajdhani', sans-serif;">
-          </div>
-          <div style="margin-bottom: 1.5rem;">
-            <input type="email" placeholder="Your Email" style="width: 100%; padding: 0.8rem; background-color: rgba(10, 25, 35, 0.8); border: 1px solid var(--primary); color: var(--text); font-family: 'Rajdhani', sans-serif;">
-          </div>
-          <div style="margin-bottom: 1.5rem;">
-            <input type="text" placeholder="Subject" style="width: 100%; padding: 0.8rem; background-color: rgba(10, 25, 35, 0.8); border: 1px solid var(--primary); color: var(--text); font-family: 'Rajdhani', sans-serif;">
-          </div>
-          <div style="margin-bottom: 1.5rem;">
-            <textarea placeholder="Your Message" rows="5" style="width: 100%; padding: 0.8rem; background-color: rgba(10, 25, 35, 0.8); border: 1px solid var(--primary); color: var(--text); font-family: 'Rajdhani', sans-serif; resize: vertical;"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name" required class="form-input">
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" placeholder="Your Email" required class="form-input">
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="subject" placeholder="Subject" required class="form-input">
+            </div>
+
+            <div class="form-group">
+                <textarea name="message" placeholder="Your Message" rows="5" required class="form-input"></textarea>
+            </div>
+
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
         </form>
       </div>
     </div>
@@ -390,10 +398,10 @@
         <h3>TECH FORGE</h3>
         <p style="margin-bottom: 1.5rem;">A premier National-level Hackathon igniting innovation across North India.</p>
         <div class="social-icons">
-          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <!-- <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a> -->
+          <a href="https://www.instagram.com/tatva_lpu/" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/goyaldivyanx?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
       <div class="footer-column">
