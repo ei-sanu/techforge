@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Forge - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wave-bottom"></div>
+
+    <div class="nav-container">
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- <div class="container">
+        <div class="header">
+            <div class="logo-area">
+                <div class="logo-container">
+                    <img src="/images/techforge.jpeg" alt="tech forge">
+                </div>
+                <span>TECH FORGE</span>
+            </div>
+            <div class="logo-container">
+                <img src="/images/lpuupdates.png" alt="University Logo">
+            </div>
+        </div> -->
+
+        <div class="title-container">
+            <h1>Tech Forge</h1>
+            <p>Code | Create | Conquer</p>
+            <div class="event-info">
+                <p>April 25-26</p>
+                <p>24 HOURS Event + Panel Discussion</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+            <div class="form-title">
+                <h2>Registration Form</h2>
+            </div>
+
+            <form id="registrationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regNo">Registration Number</label>
+                        <input type="text" class="form-control" id="regNo" name="regNo" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="university">University Name</label>
+                    <input type="text" class="form-control" id="university" name="university" required>
+                </div>
+
+                <!-- <div class="form-group">
+                    <label>Are you an LPU Student?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="isLpuYes" name="isLpuStudent" value="yes" required>
+                        <label for="isLpuYes">Yes</label>
+                        <input type="radio" id="isLpuNo" name="isLpuStudent" value="no" required>
+                        <label for="isLpuNo">No</label>
+                    </div>
+                </div> -->
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email ID</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact">Contact Number</label>
+                        <input type="tel" class="form-control" id="contact" name="contact" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="yearOfStudy">Year of B.Tech</label>
+                    <select class="form-control" id="yearOfStudy" name="yearOfStudy" required>
+                        <option value="" disabled selected>Select your year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pincode">Pincode</label>
+                        <input type="text" class="form-control" id="pincode" name="pincode" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" class="form-control" id="city" name="city" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Technical Skills (Comma separated)</label>
+                    <input type="text" class="form-control" id="skills" name="skills" placeholder="e.g. Python, JavaScript, Machine Learning">
+                </div>
+
+                <button type="submit" class="btn-submit">Register Now</button>
+            </form>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 Tech Forge. All rights reserved.</p>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="success-animation">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+            <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+            <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+        <div class="success-message">Successfully Submitted!</div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>
