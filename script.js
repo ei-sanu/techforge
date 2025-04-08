@@ -1,4 +1,3 @@
-
 const burger = document.querySelector('.burger');
 const nav = document.querySelector('nav ul');
 
@@ -128,4 +127,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+});
+
+// Create cursor effect element
+const cursorEffect = document.createElement('div');
+cursorEffect.className = 'cursor-effect';
+document.body.appendChild(cursorEffect);
+
+// Track mouse movement
+document.addEventListener('mousemove', (e) => {
+    const x = (e.clientX / window.innerWidth) * 100;
+    const y = (e.clientY / window.innerHeight) * 100;
+
+    document.documentElement.style.setProperty('--cursor-x', x + '%');
+    document.documentElement.style.setProperty('--cursor-y', y + '%');
+
+    if (!cursorEffect.classList.contains('active')) {
+        cursorEffect.classList.add('active');
+    }
+});
+
+// Handle mouse leave
+document.addEventListener('mouseleave', () => {
+    cursorEffect.classList.remove('active');
 });

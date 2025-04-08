@@ -877,3 +877,23 @@ textarea.form-input {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
 }
+
+/* Cursor Effect */
+.cursor-effect {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%),
+            transparent 0%,
+            rgba(42, 3, 105, 0.527) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.cursor-effect.active {
+    opacity: 1;
+}
