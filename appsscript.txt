@@ -1,0 +1,30 @@
+function doPost(e) {
+  const sheet = SpreadsheetApp.getActiveSheet();
+  const data = JSON.parse(e.postData.contents);
+
+  const row = [
+    new Date(),
+    data.name,
+    data.regNo,
+    data.university,
+    data.email,
+    data.contact,
+    data.yearOfStudy,
+    data.leaderName,
+    data.leaderRegNo,
+    data.member1Name,
+    data.member1RegNo,
+    data.member2Name,
+    data.member2RegNo,
+    data.member3Name,
+    data.member3RegNo,
+    data.address,
+    data.pincode,
+    data.city,
+    data.skills
+  ];
+
+  sheet.appendRow(row);
+
+  return ContentService.createTextOutput('Success');
+}
