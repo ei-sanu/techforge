@@ -1,0 +1,313 @@
+/* Update root variables to match index.html */
+:root {
+    --primary: #00f0ff;
+    --secondary: #0ff0fc;
+    --accent: #ff003c;
+    --dark: #0a0a0a;
+    --darker: #050505;
+    --text: #e0e0e0;
+    --glow: 0 0 10px rgba(0, 240, 255, 0.7);
+    --theme-overlay: rgba(0, 240, 255, 0.7);
+}
+
+/* Update background styles */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--dark);
+    color: var(--text);
+    overflow-x: hidden;
+    background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 30%, var(--theme-overlay) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, var(--theme-overlay) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+/* Add grid effect */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(var(--theme-overlay) 1px, transparent 1px),
+        linear-gradient(90deg, var(--theme-overlay) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.05;
+}
+
+/* Update logo text */
+.gradient-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--glow);
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Update team containers */
+.team-container {
+    border: 2px solid var(--primary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+    background: rgba(0, 240, 255, 0.02);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px var(--theme-overlay);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-container:hover {
+    background: rgba(0, 240, 255, 0.05);
+    box-shadow: 0 0 30px var(--theme-overlay);
+}
+
+.nav-link::after {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(5, 5, 5, 0.7));
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+    margin-top: 0;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 240, 255, 0.2), rgba(15, 240, 252, 0.2));
+    z-index: 1;
+}
+
+/* Update navigation colors */
+nav {
+    backdrop-filter: blur(10px);
+    background: rgba(5, 5, 5, 0.8);
+    border-bottom: 1px solid var(--theme-overlay);
+}
+
+/* Update navigation container */
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+    height: 5rem;
+}
+
+/* Update section titles */
+.section-title {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px var(--theme-overlay);
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+/* Footer Styles */
+.footer {
+    backdrop-filter: blur(10px);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--primary);
+}
+
+.footer-container {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    background: rgba(0, 240, 255, 0.02);
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0 0 20px rgba(0, 240, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.footer-container:hover {
+    box-shadow: inset 0 0 30px rgba(0, 240, 255, 0.2);
+    background: rgba(0, 240, 255, 0.05);
+}
+
+.footer-text {
+    text-align: center;
+    color: var(--text);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    color: var(--primary);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--secondary);
+    text-shadow: var(--glow);
+    transform: translateY(-3px);
+}
+
+/* Mouse effect styles */
+.cursor-effect {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%),
+            transparent 0%,
+            rgba(5, 5, 5, 0.95) 15%);
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.7;
+    transition: background 0.3s ease;
+}
+
+/* Team member card styles */
+.team-member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    justify-items: center;
+}
+
+/* Update team member cards */
+.team-member-card {
+    text-align: center;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    background: rgba(0, 240, 255, 0.02);
+    backdrop-filter: blur(5px);
+}
+
+.team-member-image {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+}
+
+.team-member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member-name {
+    color: var(--primary);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.team-member-role {
+    color: var(--text);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.team-member-card:hover {
+    transform: translateY(-5px);
+    background: rgba(0, 240, 255, 0.05);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+}
+
+/* Add this specific styling for Graphics section */
+section:has(> h2.section-title:contains("Graphics")) .team-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+section:has(> h2.section-title:contains("Graphics")) .team-member-image {
+    width: 150px;
+    height: 180px;
+}
+
+section:has(> h2.section-title:contains("Graphics")) .team-member-card {
+    padding: 0.5rem;
+}
+
+section:has(> h2.section-title:contains("Graphics")) .team-member-name {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+section:has(> h2.section-title:contains("Graphics")) .team-member-role {
+    font-size: 0.8rem;
+}
+
+/* Add home button styles */
+.home-button {
+    cursor: pointer;
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 100;
+    color: var(--primary);
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.home-button:hover {
+    color: var(--secondary);
+    text-shadow: var(--glow);
+    transform: translateY(-2px);
+}
