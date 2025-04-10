@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechForge - Terms and Conditions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/terms.css">
+    <link rel="icon" type="image/png" href="images/techforge.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>TechForge</h1>
+            <p>Empowering Developers with Cutting-Edge Tools</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="terms-container">
+            <h2>Terms and Conditions</h2>
+
+            <div class="terms-content">
+                <h3>1. Introduction</h3>
+                <p>Welcome to TechForge. These Terms and Conditions govern your use of our website and services. By accessing or using TechForge, you agree to be bound by these Terms. If you disagree with any part of these terms, you may not access our service.</p>
+
+                <h3>2. Services Description</h3>
+                <p>TechForge provides developer tools and resources including:</p>
+                <ul>
+                    <li>Code generators and templates</li>
+                    <li>Development environment setup tools</li>
+                    <li>Project management solutions</li>
+                    <li>API testing and documentation tools</li>
+                    <li>Open-source collaboration platforms</li>
+                </ul>
+
+                <h3>3. User Accounts</h3>
+                <p>When you create an account with us, you must provide accurate and complete information. You are responsible for safeguarding the password and for all activities that occur under your account.</p>
+
+                <h3>4. Intellectual Property Rights</h3>
+                <p>TechForge and its original content, features, and functionality are owned by TechForge and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+
+                <h3>5. User Generated Content</h3>
+                <p>You retain ownership of any intellectual property rights that you hold in the content you submit. By uploading content, you grant TechForge a worldwide, non-exclusive, royalty-free license to use, reproduce, and distribute your content in connection with our services.</p>
+
+                <h3>6. Prohibited Uses</h3>
+                <p>You may not use TechForge for any illegal purposes or to violate any laws in your jurisdiction. You may not use our platform to generate or distribute malicious code or engage in activities that could harm our infrastructure.</p>
+
+                <h3>7. Privacy Policy</h3>
+                <p>Your use of TechForge is also governed by our Privacy Policy, which is incorporated into these Terms by this reference. Please review our Privacy Policy to understand our practices.</p>
+
+                <h3>8. Limitation of Liability</h3>
+                <p>TechForge shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your access to or use of, or inability to access or use, the service.</p>
+
+                <h3>9. Changes to Terms</h3>
+                <p>We reserve the right to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect.</p>
+
+                <h3>10. Termination</h3>
+                <p>We may terminate or suspend your account and access to our services immediately, without prior notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties, or for any other reason.</p>
+
+                <h3>11. Governing Law</h3>
+                <p>These Terms shall be governed by the laws of the jurisdiction in which TechForge is registered, without regard to its conflict of law provisions.</p>
+
+                <h3>12. Contact Information</h3>
+                <p>If you have any questions about these Terms, please contact us at tatva.lpu@gmail.com.</p>
+            </div>
+
+            <div class="terms-agreement">
+                <input type="checkbox" id="agree-terms" name="agree-terms">
+                <label for="agree-terms">I have read and agree to TechForge's Terms and Conditions</label>
+            </div>
+
+            <div class="verification-container">
+                <div class="captcha-box">
+                    <span id="captcha-text"></span>
+                    <button id="refresh-captcha" class="refresh-button" title="Generate new code">
+                        <i class="fas fa-redo-alt"></i>
+                    </button>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="captcha-input" placeholder="Enter the code above" disabled>
+                    <div id="warning-message" class="warning-message">
+                        Please agree to the Terms and Conditions first
+                    </div>
+                </div>
+            </div>
+
+            <button id="continue-button" class="button" disabled></button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 TechForge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Add these divs before the closing body tag -->
+    <div id="error-popup" class="popup error">
+        <div class="popup-content">
+            Incorrect captcha! Please try again.
+        </div>
+        <button class="popup-button" onclick="closePopup('error-popup')">OK</button>
+    </div>
+
+    <div id="success-popup" class="popup success">
+        <div class="popup-content">
+            Verification successful! Redirecting...
+        </div>
+        <button class="popup-button" onclick="closePopup('success-popup')">OK</button>
+    </div>
+
+    <script src="js/terms.js">
+    </script>
+</body>
+</html>

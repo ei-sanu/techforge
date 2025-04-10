@@ -1,0 +1,403 @@
+:root {
+    --primary: #00f0ff;
+    --secondary: #0ff0fc;
+    --accent: #ff003c;
+    --dark: #0a0a0a;
+    --darker: #050505;
+    --text: #e0e0e0;
+    --glow: 0 0 10px rgba(0, 240, 255, 0.7);
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Grid effect */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--primary);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--glow);
+}
+
+.terms-container {
+    background: rgba(0, 240, 255, 0.02);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+}
+
+.terms-container h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: var(--glow);
+}
+
+.terms-content h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.terms-content p,
+.terms-content ul,
+.terms-content li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin: 1rem 0;
+}
+
+.terms-content ul {
+    padding-left: 2rem;
+}
+
+.terms-content li {
+    margin: 0.5rem 0;
+}
+
+.terms-agreement {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-top: 1px solid rgba(0, 240, 255, 0.2);
+}
+
+.terms-agreement label {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--primary);
+    margin-top: 2rem;
+}
+
+input[type="checkbox"] {
+    accent-color: var(--primary);
+}
+
+/* Add hover effects */
+.terms-container:hover {
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+}
+
+.verification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 4rem auto;
+    /* Increased margin for vertical centering */
+    max-width: 280px;
+    /* Slightly reduced width */
+    width: 100%;
+}
+
+.captcha-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: rgba(0, 240, 255, 0.02);
+    padding: 1rem;
+    border-radius: 4px;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--primary);
+    width: 100%;
+    box-sizing: border-box;
+    height: 60px;
+    /* Fixed height for better alignment */
+}
+
+#captcha-text {
+    font-family: 'Courier New', monospace;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-shadow: var(--glow);
+    letter-spacing: 5px;
+    text-align: center;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    /* Minimum width for text */
+}
+
+.input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-box input {
+    width: 100%;
+    height: 45px;
+    background: rgba(0, 240, 255, 0.02);
+    border: 1px solid var(--primary);
+    padding: 0 1rem;
+    color: var(--text);
+    font-family: 'Orbitron', sans-serif;
+    border-radius: 4px;
+    outline: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+/* Add block cursor for disabled state */
+.input-box input[disabled]::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 20px;
+    background-color: var(--primary);
+    animation: blink 1s infinite;
+}
+
+/* Style for enabled input with glow effect */
+.input-box input:not([disabled]) {
+    background: rgba(0, 240, 255, 0.05);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+    animation: enableGlow 0.5s ease-out;
+}
+
+.input-box input:not([disabled]):focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+/* Block cursor blink animation */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Input enable glow animation */
+@keyframes enableGlow {
+    0% {
+        box-shadow: 0 0 0 rgba(0, 240, 255, 0);
+        transform: scale(0.98);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+        transform: scale(1.02);
+    }
+
+    100% {
+        box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+        transform: scale(1);
+    }
+}
+
+.warning-message {
+    margin-top: 0.5rem;
+    color: #ff003c;
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.warning-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    animation: rotate 0.3s ease-in-out;
+}
+
+/* 3D Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    background: rgba(0, 240, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+    z-index: 1000;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: popup 0.5s ease forwards;
+}
+
+.popup.show {
+    display: block;
+}
+
+.popup-content {
+    color: var(--text);
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.popup-button {
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border: none;
+    padding: 0.5rem 1.5rem;
+    color: var(--darker);
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.popup-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+@keyframes popup {
+    0% {
+        transform: translate(-50%, -50%) scale(0.7) rotateX(-45deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1) rotateX(0);
+        opacity: 1;
+    }
+}
+
+/* Success and Error states */
+.popup.success {
+    border-color: #00ff00;
+}
+
+.popup.error {
+    border-color: #ff0000;
+}
+
+.refresh-button {
+    position: relative;
+    min-width: 35px;
+    min-height: 35px;
+    padding: 0.6rem;
+    margin: 0 0 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.refresh-button:hover {
+    background: rgba(0, 240, 255, 0.1);
+    transform: rotate(180deg);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+}
+
+.refresh-button i {
+    font-size: 1.2rem;
+    color: var(--primary);
+    text-shadow: 0 0 10px var(--primary);
+}
+
+.refresh-button::after {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    font-size: 0.8rem;
+    color: var(--primary);
+    background: var(--darker);
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.refresh-button:hover::after {
+    opacity: 1;
+    transform: scale(1);
+}
