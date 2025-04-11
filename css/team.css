@@ -292,22 +292,48 @@ section:has(> h2.section-title:contains("Graphics")) .team-member-role {
 
 /* Add home button styles */
 .home-button {
-    cursor: pointer;
     position: fixed;
-    top: 1.5rem;
-    right: 2rem;
-    z-index: 100;
-    color: var(--primary);
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
+    /* Keep button fixed */
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    /* Keep button above all content */
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
     font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
     text-decoration: none;
-    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
     backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
 }
 
 .home-button:hover {
-    color: var(--secondary);
-    text-shadow: var(--glow);
+    background: rgba(0, 240, 255, 0.2);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
     transform: translateY(-2px);
+}
+
+/* Add scroll behavior */
+.home-button.scrolled {
+    background: rgba(0, 240, 255, 0.15);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .home-button {
+        top: 10px;
+        right: 10px;
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .hero-section {
+        padding-top: 60px;
+        /* Add space for the home button */
+    }
 }
