@@ -888,7 +888,7 @@ textarea.form-input {
     pointer-events: none;
     background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%),
             transparent 0%,
-            rgba(42, 3, 105, 0.527) 100%);
+            rgba(1, 65, 94, 0.61) 100%);
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 1;
