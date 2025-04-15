@@ -6,7 +6,7 @@ burger.addEventListener('click', () => {
 });
 
 const countdownDate = new Date();
-countdownDate.setDate(countdownDate.getDate() + 21);
+countdownDate.setDate(countdownDate.getDate() + 10);
 
 function updateCountdown() {
     const now = new Date().getTime();
