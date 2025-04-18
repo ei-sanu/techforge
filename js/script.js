@@ -5,6 +5,31 @@ burger.addEventListener('click', () => {
     nav.classList.toggle('active');
 });
 
+// Add mobile menu functionality
+const mobileMenu = document.querySelector('.nav-container nav');
+const menuToggle = document.querySelector('.burger');
+
+menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+    }
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        mobileMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+    });
+});
+
 const countdownDate = new Date();
 countdownDate.setDate(countdownDate.getDate() + 10);
 

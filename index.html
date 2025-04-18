@@ -11,7 +11,6 @@
     </head>
     <body>
         <div class="cursor-effect"></div>
-        <!-- Header -->
         <header>
             <div class="nav-container">
                 <div class="logo">
@@ -158,121 +157,204 @@
         <!-- Our Sponsors Section -->
         <section class="section">
             <h2 class="section-title">OUR SPONSORS</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem auto; max-width: 800px;">
-                <!-- First Innovation Partner -->
-                <div class="sponsor-card" style="text-align: center; border: 1px solid var(--primary); border-radius: 8px; padding: 0.8rem;">
-                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
-                        <img src="images/smg.jpeg" alt="SMG" style="max-width: 60%; max-height: 60%; object-fit: contain;">
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem auto; max-width: 1200px;">
+                <!-- Innovation Partner Column -->
+                <div>
+                    <h3 class="tier-title" style="text-align: center; color: var(--primary); font-family: 'Orbitron', sans-serif; margin: 2rem 0 1rem; font-size: 1.5rem;">INNOVATION PARTNER</h3>
+                    <div class="sponsor-card" style="text-align: center; border: 1px solid var(--primary); border-radius: 8px; padding: 0.8rem;">
+                        <div style="height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
+                            <img src="images/smg.jpeg" alt="SMG" style="max-width: 60%; max-height: 60%; object-fit: contain;">
+                        </div>
+                        <p style="color: var(--text-color); margin: 0.3rem 0; font-size: 0.8rem;">SMG</p>
                     </div>
-                    <h3 class="tier-name" style="font-size: 0.9rem;">INNOVATION PARTNER</h3>
-                    <p style="color: var(--text-color); margin: 0.3rem 0; font-size: 0.8rem;">SMG</p>
                 </div>
 
-                <!-- Second Innovation Partner -->
-                <div class="sponsor-card" style="text-align: center; border: 1px solid var(--primary); border-radius: 8px; padding: 0.8rem;">
-                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
-                        <img src="path/to/partner2.png" alt="Partner 2" style="max-width: 60%; max-height: 60%; object-fit: contain;">
+                <!-- Supported By Column -->
+                <div>
+                    <h3 class="tier-title" style="text-align: center; color: var(--primary); font-family: 'Orbitron', sans-serif; margin: 2rem 0 1rem; font-size: 1.5rem;">SUPPORTED BY</h3>
+                    <div class="sponsor-card" style="text-align: center; border: 1px solid var(--primary); border-radius: 8px; padding: 1.2rem;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 2rem;">
+                            <div style="flex: 1; text-align: center;">
+                                <img src="images/codebreakers.png" alt="Code Breakers" style="max-width: 80%; max-height: 80px; object-fit: contain; margin-bottom: 0.5rem;">
+                                <p style="color: var(--text-color); margin: 0.3rem 0; font-size: 0.8rem;">Code Breakers</p>
+                            </div>
+                            <div style="width: 1px; height: 80px; background: var(--primary); opacity: 0.5;"></div>
+                            <div style="flex: 1; text-align: center;">
+                                <img src="images/lpu-logo-lovely_professional_university.png" alt="DSO" style="max-width: 80%; max-height: 80px; object-fit: contain; margin-bottom: 0.5rem;">
+                                <p style="color: var(--text-color); margin: 0.3rem 0; font-size: 0.8rem;">DSO</p>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="tier-name" style="font-size: 0.9rem;">INNOVATION PARTNER</h3>
-                    <p style="color: var(--text-color); margin: 0.3rem 0; font-size: 0.8rem;">Partner 2</p>
                 </div>
             </div>
         </section>
 
         <!-- Community Partners Section -->
         <section class="section">
-            <h2 class="section-title">COMMUNITY PARTNERS</h2>
-            <div style="border: 2px solid var(--primary); border-radius: 12px; padding: 2rem; margin: 0 auto; max-width: 1200px;">
-                <div class="partners-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem;">
-                    <!-- Partner 1 -->
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="images/cuupdates.jpeg" alt="CU Updates" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">CU Updates</p>
-                    </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem auto; max-width: 1200px;">
+                <!-- Community Partners Column -->
+                <div>
+                    <h2 class="section-title" style="white-space: nowrap;">COMMUNITY PARTNERS</h2>
+                    <div style="border: 2px solid var(--primary); border-radius: 12px; padding: 2rem; height: 100%;">
+                        <div class="partners-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem;">
+                            <!-- CU Updates -->
+                            <div class="partner-item" style="text-align: center;">
+                                <img src="images/cuupdates.jpeg" alt="CU Updates" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem; border-radius: 8px;">
+                                <p style="color: var(--text-color); font-size: 0.9rem; font-family: 'Orbitron', sans-serif;">CU Updates</p>
+                            </div>
 
-                    <!-- Partner 2 -->
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="images/saphire.png" alt="Sapphire" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Sapphire</p>
-                    </div>
+                            <!-- Sapphire -->
+                            <div class="partner-item" style="text-align: center;">
+                                <img src="images/saphire.png" alt="Sapphire" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem; border-radius: 8px;">
+                                <p style="color: var(--text-color); font-size: 0.9rem; font-family: 'Orbitron', sans-serif;">Sapphire</p>
+                            </div>
 
-                    <!-- Add more partners as needed -->
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner3.png" alt="Partner 3" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 3</p>
-                    </div>
+                            <!-- GDSC -->
+                            <div class="partner-item" style="text-align: center;">
+                                <img src="images/gdg.png" alt="GDG" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem; border-radius: 8px;">
+                                <p style="color: var(--text-color); font-size: 0.9rem; font-family: 'Orbitron', sans-serif;">GDG Jalandhar</p>
+                            </div>
 
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner4.png" alt="Partner 4" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 4</p>
+                            <!-- LPU CSE Society -->
+                            <!-- <div class="partner-item" style="text-align: center;">
+                                <img src="images/lpucse.jpeg" alt="LPU CSE Society" style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem; border-radius: 8px;">
+                                <p style="color: var(--text-color); font-size: 0.9rem; font-family: 'Orbitron', sans-serif;">LPU CSE Society</p>
+                            </div> -->
+                        </div>
                     </div>
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner3.png" alt="Partner 3"
-                            style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 5</p>
-                    </div>
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner3.png" alt="Partner 3"
-                            style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 6</p>
-                    </div>
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner3.png" alt="Partner 3"
-                            style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 7</p>
-                    </div>
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner3.png" alt="Partner 3"
-                            style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 8</p>
-                    </div>
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner3.png" alt="Partner 3"
-                            style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 9</p>
-                    </div>
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner10.png" alt="Partner 3"
-                            style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 10</p>
-                    </div>
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner11.png" alt="Partner 3"
-                            style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 11</p>
-                    </div>
-                    <div class="partner-item" style="text-align: center;">
-                        <img src="path/to/partner12.png" alt="Partner 3"
-                            style="width: 100px; height: 100px; object-fit: contain; margin-bottom: 1rem;">
-                        <p style="color: var(--text-color); font-size: 0.9rem;">Partner 12</p>
+                </div>
+
+                <!-- Certification Partner Column -->
+                <div>
+                    <h2 class="section-title" style="white-space: nowrap;">CERTIFICATION PARTNER</h2>
+                    <div class="sponsor-card" style="text-align: center; border: 2px solid var(--primary); border-radius: 12px; padding: 2rem; height: 100%;">
+                        <div style="display: flex; align-items: center; justify-content: center;">
+                            <img src="images/certification.jpeg" alt="Certification Partner"
+                                style="width: 250px; height: 250px; object-fit: contain; margin-bottom: 1rem; border-radius: 8px;">
+                        </div>
+                        <p style="color: var(--text-color); font-size: 0.9rem;">CERTIFY</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Certification & In Kind Partners Section -->
-        <section class="section">
-            <h2 class="section-title">CERTIFICATION & IN KIND PARTNERS</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin: 2rem auto; max-width: 800px;">
-                <!-- Certification Partner Card -->
-                <div class="sponsor-card" style="text-align: center; border: 1px solid var(--primary); border-radius: 8px; padding: 0.8rem;">
-                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
-                        <img src="images/certification.jpeg" alt="Certification Partner" style="max-width: 60%; max-height: 60%; object-fit: contain;">
-                    </div>
-                    <h3 class="tier-name" style="font-size: 0.9rem;">CERTIFICATION PARTNER</h3>
-                    <p style="color: var(--text-color); margin: 0.3rem 0; font-size: 0.8rem;">Partner Name</p>
-                </div>
+        <!-- Kind Partner and Technical Partner Container -->
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 4rem; max-width: 1200px; margin-left: auto; margin-right: auto;">
+            <!-- In Kind Partner -->
+            <div>
+                <h2 class="section-title">IN KIND PARTNER</h2>
+                <div class="sponsor-card" style="text-align: center; border: 2px solid var(--primary); border-radius: 12px; padding: 2rem;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 3rem;">
+                        <!-- First Partner -->
+                        <div style="flex: 1; text-align: center;">
+                            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                                <img src="images/inkind.jpeg" alt="In Kind Partner 1" style="max-width: 60%; max-height: 60%; object-fit: contain;">
+                            </div>
+                            <p style="color: var(--text-color); font-size: 1rem; margin-top: 1rem;">.XYZ</p>
+                        </div>
 
-                <!-- In Kind Sponsor Card -->
-                <div class="sponsor-card" style="text-align: center; border: 1px solid var(--primary); border-radius: 8px; padding: 0.8rem;">
-                    <div style="height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.5rem;">
-                        <img src="images/inkind.jpeg" alt="In Kind Sponsor" style="max-width: 60%; max-height: 60%; object-fit: contain;">
+                        <!-- Divider -->
+                        <div style="width: 1px; height: 150px; background: var(--primary); opacity: 0.5;"></div>
+
+                        <!-- Second Partner -->
+                        <div style="flex: 1; text-align: center;">
+                            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                                <img src="images/inkind2.jpeg" alt="In Kind Partner 2" style="max-width: 60%; max-height: 60%; object-fit: contain;">
+                            </div>
+                            <p style="color: var(--text-color); font-size: 1rem; margin-top: 1rem;">HoverBotix</p>
+                        </div>
+
+                        <!-- Divider -->
+                        <div style="width: 1px; height: 150px; background: var(--primary); opacity: 0.5;"></div>
+
+                        <!-- Third Partner -->
+                        <div style="flex: 1; text-align: center;">
+                            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                                <img src="images/inkind3.jpeg" alt="In Kind Partner 3" style="max-width: 60%; max-height: 60%; object-fit: contain;">
+                            </div>
+                            <p style="color: var(--text-color); font-size: 1rem; margin-top: 1rem;">Livin</p>
+                        </div>
                     </div>
-                    <h3 class="tier-name" style="font-size: 0.9rem;">IN KIND SPONSOR</h3>
-                    <p style="color: var(--text-color); margin: 0.3rem 0; font-size: 0.8rem;">.XYZ</p>
                 </div>
             </div>
-        </section>
+
+            <!-- Technical Partner -->
+            <div>
+                <h2 class="section-title" style="white-space: nowrap;">TECHNICAL PARTNER</h2>
+                <div class="sponsor-card" style="text-align: center; border: 2px solid var(--primary); border-radius: 12px; padding: 2rem;">
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 3rem;">
+                        <!-- First Technical Partner -->
+                        <div style="flex: 1; text-align: center;">
+                            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                                <img src="images/awslpu.png" alt="Technical Partner 1" style="max-width: 60%; max-height: 60%; object-fit: contain;">
+                            </div>
+                            <p style="color: var(--text-color); font-size: 1rem; margin-top: 1rem;">AWS LPU</p>
+                        </div>
+
+                        <!-- Divider -->
+                        <!-- <div style="width: 1px; height: 150px; background: var(--primary); opacity: 0.5;"></div> -->
+
+                        <!-- Second Technical Partner -->
+                        <!-- <div style="flex: 1; text-align: center;">
+                            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+                                <img src="images/tech2.jpeg" alt="Technical Partner 2" style="max-width: 60%; max-height: 60%; object-fit: contain;">
+                            </div>
+                            <p style="color: var(--text-color); font-size: 1rem; margin-top: 1rem;">Partner 2</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Workshop Section -->
+        <div style="margin-top: 4rem; margin-bottom: 8rem;max-width: 1200px; margin-left: auto; margin-right: auto;">
+            <h2 class="section-title" style="white-space: nowrap;">WORKSHOP</h2>
+            <div class="sponsor-card" style="text-align: center; border: 2px solid var(--primary); border-radius: 12px; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 2rem;">
+                    <!-- Workshop Partner 1 -->
+                    <div style="flex: 1; text-align: center;">
+                        <div style="height: 100px; display: flex; align-items: center; justify-content: center;">
+                            <img src="images/workshop1.jpeg" alt="Workshop Partner 1" style="max-width: 80%; max-height: 80px; object-fit: contain;">
+                        </div>
+                        <p style="color: var(--text-color); font-size: 0.9rem; margin-top: 0.5rem;">Department of Mental Wellbeing LPU</p>
+                    </div>
+
+                    <!-- Divider -->
+                    <div style="width: 1px; height: 100px; background: var(--primary); opacity: 0.5;"></div>
+
+                    <!-- Workshop Partner 2 -->
+                    <div style="flex: 1; text-align: center;">
+                        <div style="height: 100px; display: flex; align-items: center; justify-content: center;">
+                            <img src="images/workshop2.jpeg" alt="Workshop Partner 2" style="max-width: 80%; max-height: 80px; object-fit: contain;">
+                        </div>
+                        <p style="color: var(--text-color); font-size: 0.9rem; margin-top: 0.5rem;">Mentor X</p>
+                    </div>
+
+                    <!-- Divider -->
+                    <div style="width: 1px; height: 100px; background: var(--primary); opacity: 0.5;"></div>
+
+                    <!-- Workshop Partner 3 -->
+                    <div style="flex: 1; text-align: center;">
+                        <div style="height: 100px; display: flex; align-items: center; justify-content: center;">
+                            <img src="images/workshop3.jpeg" alt="Workshop Partner 3" style="max-width: 80%; max-height: 80px; object-fit: contain;">
+                        </div>
+                        <p style="color: var(--text-color); font-size: 0.9rem; margin-top: 0.5rem;">REVUP</p>
+                    </div>
+
+                    <!-- Divider -->
+                    <div style="width: 1px; height: 100px; background: var(--primary); opacity: 0.5;"></div>
+
+                    <!-- Workshop Partner 4 -->
+                    <div style="flex: 1; text-align: center;">
+                        <div style="height: 100px; display: flex; align-items: center; justify-content: center;">
+                            <img src="images/workshop4.jpeg" alt="Workshop Partner 4" style="max-width: 80%; max-height: 80px; object-fit: contain;">
+                        </div>
+                        <p style="color: var(--text-color); font-size: 0.9rem; margin-top: 0.5rem;">LUCR8 Ventures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Our Team Section -->
         <section class="event-details">
@@ -312,21 +394,21 @@
                         <div class="feature-icon">
                             <i class="fas fa-university"></i>
                         </div>
-                        <h3 class="feature-title">COLLEGE</h3>
+                        <h3 class="feature-title">Ambassadors</h3>
                         <p>Campus ambassadors can register multiple teams from their institution.</p>
                         <div style="margin-top: 2rem;">
                             <a href="#" class="btn">REGISTER</a>
                         </div>
                     </div>
-                    <div class="feature-card">
+                    <!-- <div class="feature-card">
                         <div class="feature-icon">
                             <i class="fas fa-briefcase"></i>
-                        </div>
-                        <h3 class="feature-title">MENTOR/JUDGE</h3>
+                        </div> -->
+                        <!-- <h3 class="feature-title">MENTOR/JUDGE</h3>
                         <p>Industry professionals interested in mentoring or judging can apply here.</p>
                         <div style="margin-top: 2rem;">
                             <a href="#" class="btn">APPLY</a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

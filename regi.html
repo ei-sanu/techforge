@@ -94,56 +94,55 @@
                 </div>
 
                 <!-- Team Information -->
-                <!-- <div class="form-group">
-                    <label for="teamLeader">Are you Team Leader?</label>
-                    <select class="form-control" id="teamLeader" name="teamLeader" required>
-                        <option value="" disabled selected>Select option</option>
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div> -->
+                <div class="team-section" style="margin: 2rem 0;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--text-color);">Team Details</h3>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="leaderName">Team Leader Name</label>
-                        <input type="text" class="form-control" id="leaderName" name="leaderName" required>
+                    <!-- Team Leader -->
+                    <div class="member-row" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="form-group">
+                            <label for="leaderName">Team Leader Name</label>
+                            <input type="text" class="form-control" id="leaderName" name="leaderName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="leaderRegNo">Registration Number</label>
+                            <input type="text" class="form-control" id="leaderRegNo" name="leaderRegNo" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="leaderRegNo">Team Leader Registration Number</label>
-                        <input type="text" class="form-control" id="leaderRegNo" name="leaderRegNo" required>
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="member1Name">1st Member Name</label>
-                        <input type="text" class="form-control" id="member1Name" name="member1Name">
+                    <!-- Member 1 -->
+                    <div class="member-row" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="form-group">
+                            <label for="member1Name">1st Member Name</label>
+                            <input type="text" class="form-control" id="member1Name" name="member1Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="member1RegNo">Registration Number</label>
+                            <input type="text" class="form-control" id="member1RegNo" name="member1RegNo">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="member1RegNo">1st Member Registration Number</label>
-                        <input type="text" class="form-control" id="member1RegNo" name="member1RegNo">
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="member2Name">2nd Member Name</label>
-                        <input type="text" class="form-control" id="member2Name" name="member2Name">
+                    <!-- Member 2 -->
+                    <div class="member-row" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="form-group">
+                            <label for="member2Name">2nd Member Name</label>
+                            <input type="text" class="form-control" id="member2Name" name="member2Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="member2RegNo">Registration Number</label>
+                            <input type="text" class="form-control" id="member2RegNo" name="member2RegNo">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="member2RegNo">2nd Member Registration Number</label>
-                        <input type="text" class="form-control" id="member2RegNo" name="member2RegNo">
-                    </div>
-                </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="member3Name">3rd Member Name</label>
-                        <input type="text" class="form-control" id="member3Name" name="member3Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="member3RegNo">3rd Member Registration Number</label>
-                        <input type="text" class="form-control" id="member3RegNo" name="member3RegNo">
+                    <!-- Member 3 -->
+                    <div class="member-row" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                        <div class="form-group">
+                            <label for="member3Name">3rd Member Name</label>
+                            <input type="text" class="form-control" id="member3Name" name="member3Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="member3RegNo">Registration Number</label>
+                            <input type="text" class="form-control" id="member3RegNo" name="member3RegNo">
+                        </div>
                     </div>
                 </div>
 
@@ -164,10 +163,10 @@
                     </div>
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="skills">Technical Skills (Comma separated)</label>
                     <input type="text" class="form-control" id="skills" name="skills" placeholder="e.g. Python, JavaScript, Machine Learning">
-                </div>
+                </div> -->
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

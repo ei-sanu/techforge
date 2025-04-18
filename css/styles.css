@@ -69,7 +69,6 @@ body {
 
 @keyframes glitch-1 {
     0% {
-        /* Remove space between 0 and % */
         transform: translateX(0);
     }
 
@@ -123,7 +122,6 @@ body {
 /* Navigation */
 header {
     background-color: rgba(5, 15, 25, 0.8);
-    /* Fix spacing */
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--primary);
     position: fixed;
@@ -319,13 +317,11 @@ nav a:hover::after {
 
 .btn-primary:hover {
     background-color: transparent;
-    /* Fix spacing */
     color: var(--primary);
 }
 
 .btn-primary::before {
     background-color: transparent;
-    /* Fix spacing */
 }
 
 /* About Section */
@@ -366,7 +362,6 @@ nav a:hover::after {
 
 .about-text {
     font-size: 1.1rem;
-    /* Fix spacing */
 }
 
 .about-image {
@@ -378,11 +373,9 @@ nav a:hover::after {
 
 .about-image img {
     width: 100%;
-    /* Changed from 100% to 20% */
     height: auto;
     display: block;
     margin: 0 auto;
-    /* Added to center the smaller image */
 }
 
 .about-image::before,
@@ -411,7 +404,6 @@ nav a:hover::after {
 /* Event Details */
 .event-details {
     background-color: rgba(0, 15, 30, 0.7);
-    /* Fix spacing */
     padding: 5rem 2rem;
     border-top: 1px solid var(--primary);
     border-bottom: 1px solid var(--primary);
@@ -456,14 +448,12 @@ nav a:hover::after {
 
 .feature-icon {
     font-size: 2.5rem;
-    /* Fix spacing */
     color: var(--primary);
     margin-bottom: 1.5rem;
 }
 
 .feature-title {
     font-family: 'Orbitron', sans-serif;
-    /* Fix spacing */
     color: var(--primary);
     margin-bottom: 1rem;
     font-size: 1.5rem;
@@ -486,7 +476,6 @@ nav a:hover::after {
 
 .tier-name {
     font-family: 'Orbitron', sans-serif;
-    /* Fix spacing */
     font-size: 1.8rem;
     color: var(--primary);
     margin-bottom: 1rem;
@@ -495,7 +484,6 @@ nav a:hover::after {
 
 .tier-price {
     font-family: 'Share Tech Mono', monospace;
-    /* Fix spacing */
     font-size: 1.5rem;
     color: var(--text);
     margin-bottom: 1.5rem;
@@ -503,7 +491,6 @@ nav a:hover::after {
 
 .benefits-list {
     text-align: left;
-    /* Fix spacing */
     margin-bottom: 1.5rem;
     list-style: none;
 }
@@ -524,7 +511,6 @@ nav a:hover::after {
 /* Countdown Timer */
 .countdown {
     background-color: rgba(0, 15, 30, 0.7);
-    /* Fix spacing */
     padding: 3rem 2rem;
     text-align: center;
 }
@@ -545,7 +531,6 @@ nav a:hover::after {
 
 .countdown-segment {
     text-align: center;
-    /* Fix spacing */
 }
 
 .countdown-value {
@@ -570,14 +555,12 @@ nav a:hover::after {
 /* Footer */
 footer {
     background-color: var(--dark);
-    /* Fix spacing */
     padding: 3rem 2rem;
     border-top: 1px solid var(--primary);
 }
 
 .footer-content {
     max-width: 1200px;
-    /* Fix spacing */
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -586,7 +569,6 @@ footer {
 
 .footer-column h3 {
     font-family: 'Orbitron', sans-serif;
-    /* Fix spacing */
     color: var(--primary);
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
@@ -594,12 +576,10 @@ footer {
 
 .footer-links {
     list-style: none;
-    /* Fix spacing */
 }
 
 .footer-links li {
     margin-bottom: 0.5rem;
-    /* Fix spacing */
 }
 
 .footer-links a {
@@ -615,14 +595,12 @@ footer {
 
 .contact-info p {
     margin-bottom: 1rem;
-    /* Fix spacing */
     display: flex;
     align-items: center;
 }
 
 .contact-info i {
     margin-right: 0.5rem;
-    /* Fix spacing */
     color: var(--primary);
 }
 
@@ -645,7 +623,6 @@ footer {
 
 .copyright {
     text-align: center;
-    /* Fix spacing */
     padding: 1.5rem 0;
     color: var(--text);
     font-family: 'Share Tech Mono', monospace;
@@ -673,24 +650,20 @@ footer {
 @media (max-width: 992px) {
     .glitch {
         font-size: 3rem;
-        /* Fix spacing */
     }
 
     .about-content {
         grid-template-columns: 1fr;
-        /* Fix spacing */
     }
 
     .countdown-value {
         font-size: 2.5rem;
-        /* Fix spacing */
         min-width: 80px;
     }
 }
 
 @media (max-width: 768px) {
     .nav-container {
-        /* Fix spacing */
         padding: 0 1rem;
     }
 
@@ -719,36 +692,107 @@ footer {
 
     .glitch {
         font-size: 2.5rem;
-        /* Fix spacing */
     }
 
     .hero-subtitle {
         font-size: 1rem;
-        /* Fix spacing */
     }
 
     .tagline {
         font-size: 1.2rem;
-        /* Fix spacing */
     }
 
     .cta-buttons {
         flex-direction: column;
-        /* Fix spacing */
         gap: 1rem;
     }
 
     .countdown-timer {
         flex-wrap: wrap;
-        /* Fix spacing */
         gap: 1rem;
     }
 
     .countdown-value {
         font-size: 2rem;
-        /* Fix spacing */
         min-width: 70px;
         padding: 0.5rem;
+    }
+
+    /* Mobile Responsive Styles */
+    .grid-container {
+        grid-template-columns: 1fr !important;
+        padding: 1rem;
+    }
+
+    [style*="grid-template-columns: repeat(2, 1fr)"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+        gap: 1rem !important;
+    }
+
+    .sponsor-card {
+        padding: 1rem !important;
+    }
+
+    [style*="display: flex; align-items: center; justify-content: center; gap"] {
+        flex-direction: column;
+    }
+
+    [style*="width: 1px; height:"] {
+        width: 80% !important;
+        height: 1px !important;
+        margin: 1rem 0;
+    }
+
+    img[style*="width:"] {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .section-title {
+        font-size: 1.5rem !important;
+        white-space: normal !important;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+    }
+
+    .nav-container {
+        padding: 0.5rem;
+    }
+
+    .hero-content {
+        padding: 2rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .faq-item {
+        padding: 1rem;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
     }
 }
 
@@ -759,12 +803,10 @@ footer {
 
     .section-title {
         font-size: 2rem;
-        /* Fix spacing */
     }
 
     .glitch {
         font-size: 2rem;
-        /* Fix spacing */
     }
 
     .feature-card,
@@ -774,7 +816,24 @@ footer {
 
     .tier-name {
         font-size: 1.5rem;
-        /* Fix spacing */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem !important;
+    }
+
+    .feature-card {
+        padding: 1rem;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr !important;
     }
 }
 
