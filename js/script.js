@@ -30,26 +30,29 @@ document.querySelectorAll('nav a').forEach(link => {
     });
 });
 
-const countdownDate = new Date();
-countdownDate.setDate(countdownDate.getDate() +7 );
+const targetDate = new Date("April 26, 2025 00:00:00").getTime();
 
-function updateCountdown() {
+const countdownInterval = setInterval(() => {
     const now = new Date().getTime();
-    const distance = countdownDate - now;
+    const distance = targetDate - now;
+
+    if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.querySelector('.countdown-timer').innerHTML = "<h3>The Hackathon has started!</h3>";
+        return;
+    }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById('days').innerHTML = days;
-    document.getElementById('hours').innerHTML = hours;
-    document.getElementById('minutes').innerHTML = minutes;
-    document.getElementById('seconds').innerHTML = seconds;
-}
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
 
-setInterval(updateCountdown, 1000);
-updateCountdown();
+}, 1000);
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
