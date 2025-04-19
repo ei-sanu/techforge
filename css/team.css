@@ -141,14 +141,20 @@ nav .container {
 
 /* Update section titles */
 .section-title {
-    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    font-family: 'Orbitron', sans-serif;
+    /* Match the cyberpunk theme */
+    font-weight: 700;
+    /* Make it bold */
+    background: linear-gradient(45deg, var(--primary), #00ffff);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 15px var(--theme-overlay);
     font-size: 2.5rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    /* Increased letter spacing */
     margin-bottom: 2rem;
+    text-transform: uppercase;
+    /* Make it all caps */
 }
 
 /* Footer Styles */
@@ -355,4 +361,46 @@ section:has(> h2.section-title:contains("Graphics")) .team-member-role {
     .team-member-card {
         width: 180px;
     }
+
+    .section-title,
+    .gradient-text {
+        font-size: 2rem;
+    }
+
+    .hero-content h1.gradient-text {
+        font-size: 2.5rem;
+    }
+}
+
+/* Remove blur effect from section titles */
+.section-title,
+.gradient-text {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary), #00ffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Update hero section heading */
+.hero-content h1.gradient-text {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(45deg, var(--primary), #00ffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Remove any existing blur or glow animations */
+.glow-effect {
+    animation: none;
 }
