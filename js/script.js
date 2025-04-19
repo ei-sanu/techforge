@@ -31,7 +31,7 @@ document.querySelectorAll('nav a').forEach(link => {
 });
 
 const countdownDate = new Date();
-countdownDate.setDate(countdownDate.getDate() + 10);
+countdownDate.setDate(countdownDate.getDate() +7 );
 
 function updateCountdown() {
     const now = new Date().getTime();
