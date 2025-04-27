@@ -19,7 +19,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: var(--darker);
     color: var(--text);
     font-family: 'Rajdhani', sans-serif;
@@ -28,7 +37,6 @@ body {
         radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.05) 0%, transparent 60%),
         linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(5, 20, 40, 0.9) 100%);
     background-attachment: fixed;
-    overflow-x: hidden;
 }
 
 /* Cyber glitch effect */
@@ -121,21 +129,23 @@ body {
 
 /* Navigation */
 header {
-    background-color: rgba(5, 15, 25, 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--primary);
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
+    background: rgba(5, 5, 5, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--primary);
     padding: 0.5rem 0;
 }
 
 .nav-container {
+    position: relative;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    position: relative;
 }
 
 .logo {
@@ -194,6 +204,40 @@ nav a:hover::after {
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--primary);
+}
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: rgba(5, 5, 5, 0.95);
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    nav.active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .burger {
+        display: block;
+    }
 }
 
 /* Hero Section */
@@ -326,7 +370,9 @@ nav a:hover::after {
 
 /* About Section */
 .section {
-    padding: 5rem 2rem;
+    padding: 4rem 1rem;
+    scroll-margin-top: 80px;
+    /* Accounts for fixed header */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -446,17 +492,47 @@ nav a:hover::after {
     top: 0;
 }
 
-.feature-icon {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
+/* Event Ended Message */
+.event-ended-message {
+    background: rgba(0, 240, 255, 0.1);
+    border: 2px solid var(--primary);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
 }
 
-.feature-title {
-    font-family: 'Orbitron', sans-serif;
+.event-ended-message h3 {
     color: var(--primary);
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+}
+
+.event-ended-message p {
+    color: var(--text);
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .event-ended-message {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .event-ended-message h3 {
+        font-size: 1.5rem;
+    }
+
+    .event-ended-message p {
+        font-size: 1rem;
+    }
+}
+
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 /* Sponsorship Section */
@@ -472,6 +548,9 @@ nav a:hover::after {
     padding: 2rem;
     text-align: center;
     transition: all 0.3s ease;
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .tier-name {
@@ -794,6 +873,19 @@ footer {
     .form-group {
         margin-bottom: 1rem;
     }
+
+    .cursor-effect {
+        display: none;
+    }
+
+    .sponsor-card:hover {
+        transform: none;
+    }
+
+    /* Reduce animation complexity */
+    .feature-card::before {
+        display: none;
+    }
 }
 
 @media (max-width: 576px) {
@@ -947,10 +1039,12 @@ textarea.form-input {
     pointer-events: none;
     background: radial-gradient(circle at var(--cursor-x, 50%) var(--cursor-y, 50%),
             transparent 0%,
-            rgba(1, 65, 94, 0.384) 100%);
+            rgba(0, 238, 255, 0.568) 100%);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
     z-index: 1;
+    will-change: opacity;
+    transform: translateZ(0);
 }
 
 .cursor-effect.active {

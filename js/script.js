@@ -155,6 +155,102 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Update countdown section to show event has ended
+    const countdownSection = document.querySelector('.countdown');
+    if (countdownSection) {
+        countdownSection.innerHTML = `
+            <h2 class="countdown-title">HACKATHON STATUS</h2>
+            <div class="event-ended-message">
+                <h3>The Hackathon Has Concluded!</h3>
+                <p>Thank you to all participants for making TechForge 2025 a great success.</p>
+                <p>Stay tuned for the next edition!</p>
+            </div>
+        `;
+    }
+
+    // Disable registration buttons and update their text
+    const registerButtons = document.querySelectorAll('a[href="no.html"]');
+    registerButtons.forEach(button => {
+        button.href = '#';
+        button.classList.add('disabled');
+        button.innerText = 'REGISTRATION CLOSED';
+    });
+
+    // Map modal functionality
+    const mapContainers = document.querySelectorAll('.map-container');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close-modal');
+
+    mapContainers.forEach((container, index) => {
+        const addressText = container.querySelector('.address-text');
+        const modal = modals[index];
+        const closeBtn = closeButtons[index];
+
+        addressText.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    // Mobile menu functionality
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    burger.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        burger.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            burger.classList.remove('active');
+        });
+    });
+
+    // Add cursor effect handling
+    const cursorEffect = document.querySelector('.cursor-effect');
+    let isMoving = false;
+    let rafId = null;
+
+    // Throttled mouse move handler
+    const handleMouseMove = (e) => {
+        if (!isMoving) {
+            isMoving = true;
+            rafId = requestAnimationFrame(() => {
+                const x = (e.clientX / window.innerWidth) * 100;
+                const y = (e.clientY / window.innerHeight) * 100;
+
+                cursorEffect.style.setProperty('--cursor-x', `${x}%`);
+                cursorEffect.style.setProperty('--cursor-y', `${y}%`);
+                cursorEffect.classList.add('active');
+
+                isMoving = false;
+            });
+        }
+    };
+
+    // Cleanup on mouse leave
+    const handleMouseLeave = () => {
+        cursorEffect.classList.remove('active');
+        if (rafId) {
+            cancelAnimationFrame(rafId);
+        }
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseleave', handleMouseLeave);
 });
 
 // Create cursor effect element
@@ -178,4 +274,42 @@ document.addEventListener('mousemove', (e) => {
 // Handle mouse leave
 document.addEventListener('mouseleave', () => {
     cursorEffect.classList.remove('active');
+});
+// Add smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Fix mobile menu
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('nav');
+const navLinks = document.querySelectorAll('nav ul li a');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    burger.classList.toggle('active');
+});
+
+// Close menu when clicking a link
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !burger.contains(e.target)) {
+        nav.classList.remove('active');
+        burger.classList.remove('active');
+    }
 });

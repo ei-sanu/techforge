@@ -1,37 +1,43 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TechForge | Code | Create | Conquer</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="icon" type="image/png" href="images/favicon.png">
-    </head>
-    <body>
-        <div class="cursor-effect"></div>
-        <header>
-            <div class="nav-container">
-                <div class="logo">
-                    <div class="logo-text">TECH FORGE</div>
-                </div>
-                <div class="burger">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">HOME</a></li>
-                        <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#event">EVENT</a></li>
-                        <li><a href="#sponsors">SPONSORS</a></li>
-                        <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScNxfCX9rUpqtrrwX7OXXNunWk3dzE1_SzY3GU8jXMz5TbFqg/viewform?usp=header">PROJECT SUBMISSION</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                        <li><a href="team.html">TEAM</a></li>
-                    </ul>
-                </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechForge | Code | Create | Conquer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+    <div class="cursor-effect"></div>
+
+    <!-- Header needs to be outside any section -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-text">TECH FORGE</div>
             </div>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#sponsors">SPONSORS</a></li>
+                    <li><a href="#project-submission">PROJECT SUBMISSION</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="team.html"">TEAM</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <!-- Main content wrapper -->
+    <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-content">
@@ -63,7 +69,7 @@
                         to code, create, and conquer. Are you ready to forge the future of technology? 🚀</p>
                 </div>
                 <div class="about-image">
-                    <img src="images/lastandfinalposter.png" alt="Tech Forge Hackathon" >
+                    <img src="images/lastandfinalposter.png" alt="Tech Forge Hackathon">
                 </div>
             </div>
         </section>
@@ -132,24 +138,14 @@
 
         <!-- Countdown Section -->
         <section class="countdown">
-            <h2 class="countdown-title">HACKATHON BEGINS IN</h2>
-            <div class="countdown-timer">
-                <div class="countdown-segment">
-                    <div class="countdown-value" id="days">21</div>
-                    <div class="countdown-label">Days</div>
+            <h2 class="countdown-title">HACKATHON STATUS</h2>
+            <div class="event-ended-message" style="text-align: center; padding: 2rem; background: rgba(0, 240, 255, 0.05); border: 2px solid var(--primary); border-radius: 12px; margin: 2rem auto; max-width: 800px;">
+                <div style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;">
+                    <i class="fas fa-check-circle"></i>
                 </div>
-                <div class="countdown-segment">
-                    <div class="countdown-value" id="hours">18</div>
-                    <div class="countdown-label">Hours</div>
-                </div>
-                <div class="countdown-segment">
-                    <div class="countdown-value" id="minutes">45</div>
-                    <div class="countdown-label">Minutes</div>
-                </div>
-                <div class="countdown-segment">
-                    <div class="countdown-value" id="seconds">33</div>
-                    <div class="countdown-label">Seconds</div>
-                </div>
+                <h3 style="color: var(--primary); font-size: 1.8rem; margin-bottom: 1rem;">Event Concluded</h3>
+                <p style="color: var(--text); font-size: 1.1rem; margin-bottom: 0.5rem;">TechForge 2025 has successfully concluded!</p>
+                <p style="color: var(--text); opacity: 0.8;">Thank you to all participants, mentors, and sponsors for making this event a great success.</p>
             </div>
         </section>
 
@@ -290,17 +286,6 @@
                             </div>
                             <p style="color: var(--text-color); font-size: 1rem; margin-top: 1rem;">AWS LPU</p>
                         </div>
-
-                        <!-- Divider -->
-                        <!-- <div style="width: 1px; height: 150px; background: var(--primary); opacity: 0.5;"></div> -->
-
-                        <!-- Second Technical Partner -->
-                        <!-- <div style="flex: 1; text-align: center;">
-                            <div style="height: 150px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
-                                <img src="images/tech2.jpeg" alt="Technical Partner 2" style="max-width: 60%; max-height: 60%; object-fit: contain;">
-                            </div>
-                            <p style="color: var(--text-color); font-size: 1rem; margin-top: 1rem;">Partner 2</p>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -377,37 +362,17 @@
         <!-- Registration Section -->
         <section id="register" class="event-details">
             <div class="section">
-                <h2 class="section-title">REGISTER NOW</h2>
+                <h2 class="section-title">REGISTRATION STATUS</h2>
                 <div class="grid-container">
                     <div class="feature-card">
                         <div class="feature-icon">
-                            <i class="fas fa-users-cog"></i>
+                            <i class="fas fa-calendar-check"></i>
                         </div>
-                        <h3 class="feature-title">TEAM</h3>
-                        <p>Register your complete team (2-4 members) with your unique team name.</p>
+                        <h3 class="feature-title">EVENT CONCLUDED</h3>
+                        <p>TechForge 2025 has successfully concluded. Thank you for your interest!</p>
                         <div style="margin-top: 2rem;">
-                            <a href="no.html" class="btn">REGISTER</a>
+                            <a href="#" class="btn disabled">REGISTRATION CLOSED</a>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <h3 class="feature-title">Ambassadors</h3>
-                        <p>Campus ambassadors can register multiple teams from their institution.</p>
-                        <div style="margin-top: 2rem;">
-                            <a href="#" class="btn">REGISTER</a>
-                        </div>
-                    </div>
-                    <!-- <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div> -->
-                        <!-- <h3 class="feature-title">MENTOR/JUDGE</h3>
-                        <p>Industry professionals interested in mentoring or judging can apply here.</p>
-                        <div style="margin-top: 2rem;">
-                            <a href="#" class="btn">APPLY</a>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -440,27 +405,6 @@
             </div>
         </section>
 
-        <!-- Gallery Section -->
-        <!-- <section class="event-details">
-            <div class="section">
-                <h2 class="section-title">GALLERY</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                    <div style="border: 2px solid var(--primary); overflow: hidden;">
-                        <img src="/api/placeholder/400/300" alt="Gallery Image 1" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
-                    </div>
-                    <div style="border: 2px solid var(--primary); overflow: hidden;">
-                        <img src="/api/placeholder/400/300" alt="Gallery Image 2" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
-                    </div>
-                    <div style="border: 2px solid var(--primary); overflow: hidden;">
-                        <img src="/api/placeholder/400/300" alt="Gallery Image 3" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
-                    </div>
-                    <div style="border: 2px solid var(--primary); overflow: hidden;">
-                        <img src="/api/placeholder/400/300" alt="Gallery Image 4" style="width: 100%; height: auto; display: block; transition: transform 0.3s ease;">
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <!-- Contact Section -->
         <section id="contact" class="section">
             <h2 class="section-title">GET IN TOUCH</h2>
@@ -489,8 +433,6 @@
                         <p><i class="fas fa-envelope"></i> Tatva<br>CEO: Divyansh<br>Phone: +91 82731 65573<br>Email: tatva.lpu@gmail.com</p>
                     </div>
                     <div class="social-icons">
-                        <!-- <a href="https://www.instagram.com/tatva_lpu/" class="social-icon"><i class="fab fa-instagram"></i></a> -->
-
                     </div>
                 </div>
                 <div>
@@ -517,73 +459,74 @@
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- Footer -->
-        <footer>
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>TECH FORGE</h3>
-                    <p style="margin-bottom: 1.5rem;">A premier National-level Hackathon igniting innovation across North India.</p>
-                    <div class="social-icons">
-                        <!-- <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a> -->
-                        <a href="https://www.instagram.com/tatva_lpu/" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/tatvalpu/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>TECH FORGE</h3>
+                <p style="margin-bottom: 1.5rem;">A premier National-level Hackathon igniting innovation across North India.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/tatva_lpu/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/tatvalpu/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="footer-column">
-                    <h3>QUICK LINKS</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#event">Event Details</a></li>
-                        <li><a href="#sponsors">Sponsorship</a></li>
-                        <li><a href="#register">Registration</a></li>
-                        <li><a href="#faq">FAQs</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>RESOURCES</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Code of Conduct</a></li>
-                        <li><a href="#">Rules & Guidelines</a></li>
-                        <li><a href="#">Judging Criteria</a></li>
-                        <li><a href="#">Problem Statements</a></li>
-                        <li><a href="#">Past Winners</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>CONTACT</h3>
-                    <div class="contact-info">
-                        <div class="map-container footer-map">
-                            <p class="address-text"><i class="fas fa-map-marker-alt"></i> LPU, Phagwara, Punjab </p>
-                            <div id="footerMapModal" class="modal">
-                                <div class="modal-content">
-                                    <span class="close-modal">&times;</span>
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6821.537659720571!2d75.69941861582272!3d31.254822196918116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5f5e9c489cf3%3A0x4049a5409d53c300!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1743942854887!5m2!1sen!2sin"
-                                        width="100%"
-                                        height="450"
-                                        style="border:0;"
-                                        allowfullscreen=""
-                                        loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade">
-                                    </iframe>
-                                </div>
+            </div>
+            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#event">Event Details</a></li>
+                    <li><a href="#sponsors">Sponsorship</a></li>
+                    <li><a href="#register">Registration</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>RESOURCES</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Code of Conduct</a></li>
+                    <li><a href="#">Rules & Guidelines</a></li>
+                    <li><a href="#">Judging Criteria</a></li>
+                    <li><a href="#">Problem Statements</a></li>
+                    <li><a href="#">Past Winners</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>CONTACT</h3>
+                <div class="contact-info">
+                    <div class="map-container footer-map">
+                        <p class="address-text"><i class="fas fa-map-marker-alt"></i> LPU, Phagwara, Punjab </p>
+                        <div id="footerMapModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close-modal">&times;</span>
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6821.537659720571!2d75.69941861582272!3d31.254822196918116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5f5e9c489cf3%3A0x4049a5409d53c300!2sLovely%20Professional%20University!5e0!3m2!1sen!2sin!4v1743942854887!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="450"
+                                    style="border:0;"
+                                    allowfullscreen=""
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
                             </div>
                         </div>
-                        <p><i class="fas fa-phone"></i> +91 62066 86464</p>
-                        <p><i class="fas fa-envelope"></i> tatva.lpu@gmail.com</p>
                     </div>
+                    <p><i class="fas fa-phone"></i> +91 62066 86464</p>
+                    <p><i class="fas fa-envelope"></i> tatva.lpu@gmail.com</p>
                 </div>
             </div>
-            <div class="copyright">
-                &copy; 2025 Tech Forge Hackathon | Organized by Tatva X The Code Breakers | All Rights Reserved
-            </div>
-        </footer>
+        </div>
+        <div class="copyright">
+            &copy; 2025 Tech Forge Hackathon | Organized by Tatva X The Code Breakers | All Rights Reserved
+        </div>
+    </footer>
 
-        <!-- JavaScript -->
-        <script src="js/script.js"></script>
-        </script>
-    </body>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+    </script>
+</body>
+
 </html>
